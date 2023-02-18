@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5vh;
+    scroll-behavior: smooth;
+}
+
+#master-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f5f7f7;
+    }
+
+
+#header {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    height: 6vh;
+    font-family: 'Manrope', sans-serif;
+    background-color: #fbfcfc;
+    overflow: hidden;
+}
+
+.admin-panel-text {
+    position: relative;
+    bottom: 0.8vh;
+    font-size: 1.8vh;
+    line-height: 6vh;
+}
+
+.header-box-right {
+    position: relative;
+    float: right;
+    display: grid;
+    grid-column-gap: 0px;
+    grid-template-columns: 1fr 1fr;
+    width: 20vw;
+    height: 100%;
+    
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+.header-button {
+    position: relative;
+    display: inline-block;
+    width: 8vw;
+    height: 4vh;
+    font-size: 1vw;
+    line-height: 4vh;
+    top: 1vh;
+    border-radius: 3.5px;
+    color: rgb(224 223 229);
+    background-color: rgb(69, 62, 97);
+    box-shadow: 0 0.35vh 0.35vh rgb(0 0 0 / 18%);
+    transition: 0.175s ease-in;
+}
+
+.header-button:hover {
+    cursor: pointer;
+    /*For some reason, the color is not being set on a hover event,
+    after an onClick event occurs, defined in client-functionality.js */
+    color: rgb(241, 240, 250) !important;
+    box-shadow: rgba(0, 0, 0, 0.52) 0px 0.5vh 0.85vh;
+    transition: 0.215s;
+    transition-timing-function: cubic-bezier(.62,-0.18,.83,.67);
+ }
+
+ #main-container {
+    position: relative;
+    display: inline-block;
+
+    height: 90vh;
+    width: 98vw;
+    top: 2vh;
+    left: 1vw;
+    background-color: #ffffff;
+    box-shadow: rgb(29 32 34 / 30%) 0px 1px 2px 0px, rgb(119 135 147 / 15%) 0px 1px 3px 1px;
+    border-radius: 3.4px;
+    opacity: 0;
+    /*transition: 0.2s ease-in;*/
+    /*background-color: rgb(59, 59, 59);*/
+ }
+
+ .main-container-top-panel {
+    /*This helps clean up the manage animation*/
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 4vh;
+    font-size: 2vh;
+    font-weight: 600;
+    line-height: 4vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
+ }
+
+ .main-container-top-panel-box-left {
+    padding-left: 0.5vh;
+    padding-right: 0.5vh;
+    border-bottom: 1.3px solid #dbd8e0;
+ }
+
+ .main-container-top-panel-box-right {
+    opacity: 0.14;
+    padding-left: 0.5vh;
+    padding-right: 0.5vh;
+    font-weight: 400;
+    transition: 0.21s ease-in;
+ }
+
+ .main-container-top-panel-box-right:hover {
+    cursor: pointer;
+    opacity: 1 !important;
+    transition: 0.35s ease-out;
+    /*border-bottom: 1.3px solid #dbd8e0;*/
+ }
+
+ /*Pop-up "Manage" Box*/
+ #man001-main-box {
+    position: absolute;
+    display: inline-block;
+    background-color: #d0ced6;
+    width: 74vw;
+    height: 64vh;
+    left: 13vw;
+    top: 12vh;
+    border: 0.06cm solid black;
+    border-radius: 7.25px;
+    box-shadow: 0 8.35px 6px -6px rgb(29 7 58);
+    cursor: grab;
+    visibility: hidden;
+ }
+ #man001-box-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    font-size: 3vh;
+    line-height: 7vh;
+    height: 7vh;
+    width: 100%;
+    color: lightgoldenrodyellow;
+    background-color: #1c0036;
+ }
+
+ #man001-box-header-close-button {
+    position: relative;
+    display: inline-block;
+    top: 4px;
+    right: 6px;
+    width: 3vh;
+    height: 3vh;
+    background-color: rgb(62, 32, 90);
+    border-radius: 3.25px;
+    border: 1px solid black;
+    padding-left: 1.25vh;
+ }
+
+ #man001-box-header-close-button:hover {
+    cursor: pointer;
+    background-color: rgb(81, 43, 117);
+ }
+ 
+ .man001-box-button-list-title {
+    font-size: 2vh;
+    line-height: 3.3vh;
+    height: 2.5vh;
+    padding-left: 2vw;
+    cursor: default;
+ }
+
+ #special-submit-button {
+    position: relative;
+    display: inline-block;
+    top: 0.25vh;
+    left: 12vw;
+    border-radius: 2px;
+    border: 0.75px solid black;
+    background-color: green;
+ }
+
+ #special-submit-button:hover {
+    cursor: pointer;
+ }
+
+ #form-change-box {
+    position: absolute;
+    display: inline-block;
+    height: 2.5vh;
+    right: 2vw;
+ }
+
+ .form-change-box-button {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5vh;
+    line-height: 3vh;
+    height: 3vh;
+    bottom: 1px;
+    background-color: rgb(138, 139, 146);
+    border-radius: 1rem;
+    padding: 0 0.5rem;
+    transition: 0.185s;
+    transition-timing-function: cubic-bezier(.62,-0.18,.83,.67);
+ }
+
+ .form-change-box-button:hover {
+    cursor: pointer;
+    background-color: rgb(186, 188, 202) !important;
+}
+
+
+ #man001-box-button-list {
+    position: relative;
+    display: inline-block;
+    background-color: ivory;
+    width: 70vw;
+    left: 2vw;
+    top: 1vh;
+    height: 52vh;
+    cursor: default;
+    /*overflow-y: scroll;*/
+ }
+
+ .man001-box-button-list-item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    height: 10vh;
+    padding: 0.2vh;
+ }
+
+ .man001-box-button-list-item-header-001 {
+    font-size: 1.5vh;
+    line-height: 3vh;
+    height: 3vh;
+    width: 6vw;
+    color: rgb(12, 37, 12);
+ }
+
+ .man001-box-button-list-item-header-001-box {
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    left: 0;
+    height: 7vh;
+    width: 6vw;
+ }
+
+ .man001-box-button-list-item-header-001-box:hover {
+    cursor: pointer;
+ }
+
+ .man001-box-button-list-item-header-001-field {
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    height: 7vh;
+    width: 16vw;
+ }
+
+ .man001-box-button-list-item-header-001-field input {
+    position: relative;
+    display: inline-block;
+    top: 1vh;
+    height: 5vh;
+    width: 15vw;
+    line-height: 5vh;
+    font-size: 2vh;
+    height: 5vh;
+ }
+
+ .fa-plus {
+    font-size: 5vh; 
+    line-height: 7vh;
+    color: rgb(51, 21, 105);
+    }
+
+ .man001-box-button-list-item-header-002 {
+    position: relative;
+    display: inline-block;
+    font-size: 1.5vh;
+    line-height: 3vh;
+    height: 3vh;
+    width: 16vw;
+    color: rgb(12, 37, 12);
+ }
+
+ @keyframes growBox {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+  }
+
+  @keyframes shrinkBox {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+  }
+
+ .main-container-title-bar {
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #2a0d46;
+    font-weight: 600;
+    font-size: 3vh;
+    line-height: 6vh;
+    height: 6vh;
+ }
+
+ .table-container {
+    position: relative;
+    width: 96vw;
+    left: 1.5vw;
+    height: 78vh;
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+    overflow-x: wrap;
+ }
+
+ table {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-collapse: collapse;
+  }
+  
+td {
+    letter-spacing: 0.48px;
+    font-size: 1.75vh;
+    line-height: 3.5vh;
+    height: 3.5vh;
+    font-weight: 600;
+    padding-left: 0.5vh;
+    border: 0.9px solid rgb(81 29 120);
+  }
+
+
+ th {
+    position: sticky; top: 0;
+	background-color: rgb(51, 51, 51);
+	color: white;
+	font-size: 2vh;
+    line-height: 4vh;
+    height: 4vh;
+    letter-spacing: 0.75px;
+    border: 1px solid black;
+}
+
+tr {
+    border: none;
+}
+
+ tbody tr:nth-child(odd) {
+    background-color: rgb(194 191 197);
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #eee;
+  }
+
+
+
+
+
+
+  /*Scrollbar Styling (similar to Mac OS)*/
+
+.table-container::-webkit-scrollbar {
+    background-color:#fff;
+}
+
+/* background of the scrollbar except button or resizer */
+.table-container::-webkit-scrollbar-track {
+    background-color:#fff;
+}
+
+/* scrollbar itself */
+.table-container::-webkit-scrollbar-thumb {
+    background-color:#6a6a76;
+    border-radius:16px;
+    border:6px solid #fff;
+    
+}
+.table-container::-webkit-scrollbar-thumb:hover {
+    background-color:#6a6a76;
+    border-radius:16px;
+    border:5px solid #fff;
+}
+
+.table-container::-webkit-scrollbar-button {display:none}
