@@ -5,12 +5,12 @@ This is my interprtation of the "accounting" portion of this development challen
 I decided to create a ficticious company, called Rebel, using the logo from rebel.com (the real company). This application allows a user from the hypethetical "accounting" department to access the artist data for their record label, and the associated attributes for each artist. Atrists contain the following attributes: "artist", "rate", "streams", and "overdue". Note that I modified the original JSON file, in order to include a new category (key/value pair), called "overdue". I generated a random number between 1 and 10 for each artist, and assigned them that value. This could be interpreted as a company where the business model alots their artists royalties on a per-chunk basis (ie: if you reach a certain amount of revenue, between the combination of your streams and your rate, say $1000 worth of streams, then you would be payed out 1 chunk or unit of $1000). The CRUD operations are persistant on the backend server (written to a JSON file), as well as a database (running SQLServer). The focus with this project was mostly on the frontend, in trying to make a user interface which looked nice and was easy to operate.
 
 ## Important Details:
-Website Link: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; http://143.110.220.37/  
+Website Link: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; http://143.110.220.37/  
 Database Credentials: - Server: sql9.freemysqlhosting.net  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Name: sql9599342  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Username: sql9599342  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Password: IPQQUZdtfw  
-Original Challenge:   https://github.com/rebeldotcom/roster-challenge-api-and-ui  
+Original Challenge: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; https://github.com/rebeldotcom/roster-challenge-api-and-ui  
                       
 ## Requirements
 1) LEMP Stack (Linux distro, Nginx, MySQL, PHP)
