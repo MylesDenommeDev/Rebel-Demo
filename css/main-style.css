@@ -374,14 +374,19 @@
   }
   
 td {
-    letter-spacing: 0.48px;
+    letter-spacing: 0.7px;
     font-size: 1.75vh;
     line-height: 3.5vh;
     height: 3.5vh;
-    font-weight: 600;
+    font-weight: 400;
     padding-left: 0.5vh;
     border: 0.9px solid rgb(81 29 120);
   }
+
+  td::selection {
+   color: rgb(245 243 241);
+   background: rgb(26 12 60);
+ }
 
 
  th {
@@ -400,7 +405,8 @@ tr {
 }
 
 tbody tr:hover{
-   background-color: #26891d !important;
+   color: white;
+   background-color: rgb(111 33 133) !important;
    cursor: pointer;
 }
 
