@@ -336,8 +336,6 @@ loadTableData = (tableType) => {
   }
 
   function resetDB() {
-	//not possible just by using the frontend interface, as client-side javascript will reject bad type of latter 3 values (float/in/int)
-	//however a custom malicious post message could be crafted and this could be sent as such, better phrases could improve security here.
 	fetch(URL, {
 		method: "POST",
 		body: JSON.stringify({
